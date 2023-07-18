@@ -1,0 +1,31 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+
+{% block contenido %}
+    <div id="titulo-lista">
+        <h1>Suscripciones de usuarios</h1>
+    </div>
+    <div class="contenido-lista">
+        <table>
+            <thead>
+                <tr>
+                    <th>SUSCRIPCIÓN</th>
+                    <th>USUARIO</th>
+                    <th>CORREO</th>
+                    <th>¿Deseas eliminar?</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for aux in listaUsuarios %}
+                <tr>
+                    <td> {{aux.descripcion}} </td>
+                    <td> {{aux.usuario}} </td>
+                    <td> {{aux.email}} </td>
+                    <td><a class="btn-eliminarLista" href="{% url 'eliminar_suscriptor' aux.id %}" >Eliminar</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

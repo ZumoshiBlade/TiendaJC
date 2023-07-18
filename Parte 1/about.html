@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Contacto - JC</title>
+</head>
+<body>
+      <!--Logo_Busqueda_Nav-->
+  <div class="container">
+    <header>
+      <div class="logo">
+        <a href="index.html"><img src="img/1eda7a920595361944650b58376e27ec-flor-roja-rosa-plana-by-vexels.png" alt="" height="60px"></a> 
+      </div>
+      <div>
+        <input type="text" name="search" placeholder="  Busca algún producto...">
+      </div>
+
+      <nav>
+        <li><a href="index.html#shop" class="shop-btn">Catálogo</a></li>
+        <li><a href="about.html" class="contacto-btn">Contacto</a></li>
+        <li><a href="login.html" class="login-btn">Acceso socios</a></li>
+      </nav>
+    </header>
+    <div class="form">
+        <form action="action_page.php">
+            <img src="img/llave-inglesa.jpg" alt="" height="100px" width="100px">
+            <h1 class="textbig">Contáctese con el JC</h1>
+            <h3 class="textlow">Ingrese sus datos y su mensaje</h3>
+
+          <label for="name">Su nombre:</label>
+          <input type="text" id="name" name="about" placeholder="Escriba aquí su nombre...">
+      
+          <label for="email">Su correo eléctronico:</label>
+          <input type="text" id="email" name="about" placeholder="Escriba aquí su correo eléctronico...">
+      
+          <label for="duda">Categoría de producto sobre el que tiene la duda:</label>
+          <select id="duda" name="duda">
+            <option value="maceteros">Maceteros</option>
+            <option value="tierrahojas">Tierra de hojas</option>
+            <option value="arbustos">Arbustos</option>
+            <option value="flores">Flores</option>
+            <option value="Cuenta">Cuenta de socio</option>
+            <option value="otro">Otro</option>
+          </select>
+      
+          <label for="subject">Tu duda o consulta:</label>
+          <textarea id="subject" name="subject" placeholder="Cuéntanos en qué te podemos ayudar..." style="height:200px"></textarea>
+      
+          <input type="submit" value="Guardar y enviar">
+      
+        </form>
+      </div>
+
+      <footer class="footer1">
+        <p>Jardín Comunitario © <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">Dream Team</a> 2021</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+
+{% block contenido %}
+    <a class="btn-agregarProducto" href="https://youtu.be/GJDNkVDGM_s">Proceder al pago...?</a>
+
+    <div class="placeholder">
+        <li>
+            <h1 id="placeholder_cart">Aquí aparecerían los productos que agregues al carrito de compras...</h1>
+        </li>
+    </div>   
+    
+    <div>
+        {% include 'app/paginator.html' %}
+    </div>
+{% endblock %}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Iniciar sesión - JC</title>
+</head>
+<body>
+      <!--Logo_Busqueda_Nav-->
+  <div class="login">
+    <header>
+      <div class="logo">
+        <a href="index.html"><img src="img/1eda7a920595361944650b58376e27ec-flor-roja-rosa-plana-by-vexels.png" alt="" height="60px"></a> 
+      </div>
+      <div>
+        <input type="text" name="search" placeholder="  Busca algún producto...">
+      </div>
+
+      <nav>
+        <li><a href="index.html#shop" class="shop-btn">Catálogo</a></li>
+        <li><a href="about.html" class="contacto-btn">Contacto</a></li>
+        <li><a href="login.html" class="login-btn">Acceso socios</a></li>
+      </nav>
+    </header>
+    <form action="action_page.php" method="post">
+        <div class="imgcontainer">
+          <img src="img/img_avatar2.png" alt="Avatar" class="avatar">
+        </div>
+      
+        <div class="login">
+          <label for="uname"><b>Número de socio</b></label>
+          <input type="text" placeholder="Ingrese el número de socio de su tarjeta" name="uname" required>
+      
+          <label for="psw"><b>Contraseña</b></label>
+          <input type="password" placeholder="Ingrese su Contraseña" name="psw" required>
+      
+          <button type="submit">Iniciar sesión</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Recordar mis datos de inicio de sesión
+          </label>
+        </div>
+      
+        <div class="login" style="background-color:#f1f1f1">
+          <button type="button" class="cancelbtn">Cancelar</button>
+          <span class="psw">Olvidaste tu <a href="about.html">contraseña?</a></span>
+        </div>
+      </form>
+
+      <footer class="footer1">
+        <p>Jardín Comunitario © <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">Dream Team</a> 2021</p>
+    </footer>
+</body>
+</html>

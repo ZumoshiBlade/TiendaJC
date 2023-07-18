@@ -1,0 +1,24 @@
+{% extends 'app/base.html' %}
+{%load static%}
+{%load crispy_forms_tags%}
+
+{% block contenido %}
+  <div class="titulo-login">
+    <h1>Acceso usuario</h1>
+  </div>
+  <div class="card">
+    <form action="" method="POST" class="inicio-sesion">
+      <div class="login">
+        {% csrf_token %}
+
+        <table class="t_login">
+          {{ form|crispy }}
+        </table>
+        <input type="submit" class="submit" value="Iniciar Sesión">
+        <input type="reset" class="btn-clean" value="Limpiar">
+        <a class="btn-registro" href="{% url 'registro_usuario' %}">Registrarse</a>
+      </div>
+  </form>
+  {{ mensaje }}
+  </div>
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+
+
+{% block contenido %}
+
+    <!--slideshow-->
+    <section class="banner">
+      <div class="slider">        
+        <ul>
+          <li><img src="{% static 'app/img/flores-1.jpg' %}" alt=""></li>
+          <li><img src="{% static 'app/img/maceteros-1.jpg' %}" alt=""></li>
+          <li><img src="{% static 'app/img/flores-2.jpg' %}" alt=""></li>
+          <li><img src="{% static 'app/img/maceteros-2.jpg' %}" alt=""></li>
+          <li><img src="{% static 'app/img/flores-3.jpg' %}" alt=""></li>
+        </ul>
+      </div>
+    </section>
+    <!--Tipo de productos-->
+    <div class="wrap">
+      <h1>Productos destacados</h1>
+        <section class="products-list">
+          <div class="product-item" category="tierra_hojas">
+            <img src="{% static 'app/img/tierra_hoja-cat.jpg' %}" alt="">
+            <a href="#">Tierra de hojas Prosan</a>
+          </div>
+          <div class="product-item" category="tierra_hojas">
+            <img src="{% static 'app/img/tierra_hoja-cat-2.jpg' %}" alt="">
+            <a href="#">Tierra de hojas Anasac</a>
+          </div>
+          <div class="product-item" category="flores">
+            <img src="{% static 'app/img/flor-cat.jpg' %}" alt="">
+            <a href="#">Liliums</a>
+          </div>
+          <div class="product-item" category="flores">
+            <img src="{% static 'app/img/flor-cat-2.jpg' %}" alt="">
+            <a href="#">Rosas</a>
+          </div>
+          <div class="product-item" category="maceteros">
+            <img src="{% static 'app/img/macetero-cat-1.jpg' %}" alt="">
+            <a href="#">Maceteros de yeso</a>
+          </div>
+          <div class="product-item" category="maceteros">
+            <img src="{% static 'app/img/macetero-cat-2.jpg' %}" alt="">
+            <a href="#">Maceteros de plástico</a>
+          </div>
+          <div class="product-item" category="arbustos">
+            <img src="{% static 'app/img/arbusto-cat.jpg' %}" alt="">
+            <a href="#">Arbusto artificial</a>
+          </div>
+          <div class="product-item" category="arbustos">
+            <img src="{% static 'app/img/arbusto-cat-2.jpg' %}" alt="">
+            <a href="#">Arbusto natural</a>
+          </div>
+        </section>
+    </div>
+
+{% endblock  %}
+
+
+
+
+
+
+
+
+

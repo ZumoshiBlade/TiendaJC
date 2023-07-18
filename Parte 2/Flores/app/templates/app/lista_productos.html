@@ -1,0 +1,48 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+
+{% block contenido %}
+{% if user.is_authenticated %}
+    {% if perms.app.add_producto %}
+    <a class="btn-agregarProducto" onclick="confirmarAgregar( {{ aux.id }} )">Agregar Producto</a>
+    {% endif %}
+
+    {% if perms.app.delete_user %}
+    <div class="listas">
+        {% for aux in lista %}
+        <div class="product">
+            <h3 class="nombre-producto">{{aux.nombre}}</h3>
+            {% if aux.imagen %}
+                <img src="{{ aux.imagen.url }}" alt="" height="300px" width="300px">
+            {% else %}
+                <img src="{% static 'app/img/no-hay-imagen.jpg' %}" alt="" height="300px" width="300px">
+            {% endif %}
+        <div class="botones">
+            {% if perms.app.change_producto %}
+            <a class="modify" onclick="confirmarModificar( {{ aux.id }} )">Modificar</a>
+            {% endif %}
+            {% if perms.app.delete_producto %}
+            <a class="delete" onclick="confirmarEliminar( {{ aux.id }} )">Eliminar</a>
+            {% endif %}
+        </div>    
+
+        </div>
+        {% endfor %}
+    </div>
+    
+    <div>
+        {% include 'app/paginator.html' %}
+    </div>
+    {% else %}
+    <div class="peppo-logo">
+        <img src="{% static 'app/img/peppo.png' %}" alt="" class="icono-peppo">
+        <div>
+            <a href="https://www.youtube.com/watch?v=YsLCjOl0Bfw" class="btn-agregarProducto">ACCESO DENEGADO</a>
+        </div>
+        
+        
+    </div>
+    {% endif %}
+{% endif %}
+{% endblock %}

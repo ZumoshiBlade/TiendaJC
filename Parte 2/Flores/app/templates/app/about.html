@@ -1,0 +1,34 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block contenido %}
+    <div class="form">
+        <form action="action_page.php">
+            <img src="{% static 'app/img/llave-inglesa.jpg' %}" alt="" height="100px" width="100px">
+            <h1 class="textbig">Contáctese con el JC</h1>
+            <h3 class="textlow">Ingrese sus datos y su mensaje</h3>
+
+          <label for="name">Su nombre:</label>
+          <input type="text" id="name" name="about" placeholder="Escriba aquí su nombre...">
+      
+          <label for="email">Su correo eléctronico:</label>
+          <input type="text" id="email" name="about" placeholder="Escriba aquí su correo eléctronico...">
+      
+          <label for="duda">Categoría de producto sobre el que tiene la duda:</label>
+          <select id="duda" name="duda">
+            <option value="maceteros">Maceteros</option>
+            <option value="tierrahojas">Tierra de hojas</option>
+            <option value="arbustos">Arbustos</option>
+            <option value="flores">Flores</option>
+            <option value="Cuenta">Cuenta de socio</option>
+            <option value="otro">Otro</option>
+          </select>
+      
+          <label for="subject">Tu duda o consulta:</label>
+          <textarea id="subject" name="subject" placeholder="Cuéntanos en qué te podemos ayudar..." style="height:200px"></textarea>
+      
+          <input type="submit" value="Guardar y enviar">
+      
+        </form>
+      </div>
+{% endblock  %}

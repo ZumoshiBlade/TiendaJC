@@ -1,0 +1,454 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*Header*/
+nav{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: rgb(3, 7, 19);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 10px;
+    background-color: rgb(88, 175, 93);
+
+    /*Flex*/
+    display: flex;
+    display: -webkit-flex;
+    display: -o-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shop-btn{
+    padding: 15px 30px;
+    border-radius: 99px;
+    background: #f85656;
+}
+
+.shop-btn:hover {
+    background-color: red;
+    color: white;
+    transition: 0.3s;
+}
+
+.contacto-btn{
+    padding: 15px 30px;
+    border-radius: 99px;
+    background: #f85656;
+}
+
+.contacto-btn:hover {
+    background-color: red;
+    color: white;
+    transition: 0.3s;
+}
+
+.login-btn{
+    padding: 15px 30px;
+    border-radius: 99px;
+    background: #f85656;
+}
+
+.login-btn:hover {
+    background-color: red;
+    color: white;
+    transition: 0.3s;
+}
+
+
+header nav{
+    /*Flex*/
+    display: flex;
+    display: -webkit-flex;
+    display: -o-flex;
+    display: -moz-flex;
+    display: -ms-flex; 
+}
+
+header nav li{
+    margin: 0 15px;
+}
+
+input[name=search] {
+    width: 250px;
+    box-sizing: border-box;
+    border: 2px solid #f85656;
+    border-radius: 99px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 6px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+
+  input[name=search]:focus {
+    width: 130%;
+  }
+
+
+/*Slider*/
+.banner{
+    margin: 0;
+    background-color: white;
+    padding-top: 80px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+}
+
+.slider{
+    overflow: hidden;
+    width: 100%;
+    margin: auto;
+}
+
+.slider ul{
+    display: flex;
+    display: -webkit-flex;
+    display: -o-flex;
+    display: -moz-flex;
+    display: -ms-flex;  
+    padding: 0;
+    width: 500%;
+
+    animation: cambio 15s infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+
+.slider li{
+    width: 100%;
+    list-style: none;
+}
+
+.slider ul li img{
+    width: 90%;
+}
+
+@keyframes cambio{
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+    
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+    75% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+    
+} 
+
+/*Catálogo*/
+
+
+.wrap{
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+}
+
+.wrap h1{
+    color:#494B4D;
+    font-weight: 400;
+    display: flex;
+    display: -webkit-flex;
+    display: -o-flex;
+    display: -moz-flex;
+    display: -ms-flex;  
+    flex-direction: column;
+    text-align: center;
+    margin: 15px 0px;
+}
+
+.wrap h1:after{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #C7C7C7;
+    margin: 20px 0;
+}
+
+.store-wrap{
+    display: flex;
+}
+
+.category-list{
+    display: flex;
+    flex-direction: column;
+    width: 18%;
+
+}
+
+.products-list{
+    width: 82%;
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+.products-list .product-item{
+    width: 22%;
+    margin-left: 3%;
+    margin-bottom: 25px;
+    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.22);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: flex-start;
+}
+
+.products-list .product-item img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.category-list .category-item{
+    display: block;
+    width: 90%;
+    padding: 15px 0;
+    margin-bottom: 20px;
+    background: #f85656;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.category-list a:hover{
+    background: #920101;
+} 
+.category-list .ct_item-active{
+    background: #920101;
+} 
+
+
+.products-list .product-item a{
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    background: #5a00afb2;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.products-list .product-item a:hover{
+    background: #38006db2;;
+}
+
+footer {
+    /* FLEX */
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(88, 175, 93);
+    color: black;
+    padding: 20px 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[name=about], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Add a background color and some padding around the form */
+  .form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 100px 60px;
+  }
+
+  .form h1 {
+      text-align: center;
+  }
+
+  .form h3 {
+      text-align: center;
+  }
+
+
+
+  /*LOGIN*/
+/* Bordered form */
+form {
+    border: 3px solid #f1f1f1;
+    padding: 160px 90px;
+  }
+
+  .imgcontainer{
+      width: 35%;
+      padding: 0 60px;
+  }
+  
+  /* Full-width inputs */
+  input[name=uname], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  /* Add a hover effect for buttons */
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Extra style for the cancel button (red) */
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+
+  
+  /* Avatar image */
+  img.avatar {
+    display: block;
+    margin-left: 140%;
+    width: 40%;
+    border-radius: 50%;
+
+  }
+  
+  /* Add padding to containers */
+  .container {
+    padding: 16px;
+  }
+  
+  /* The "Forgot password" text */
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+
+.form form img{
+    display: block;
+    margin: auto;
+}
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+      display: block;
+      float: none;
+    }
+    .cancelbtn {
+      width: 100%;
+    }
+  }
+
+/*Responsive*/
+
+@media (max-width:1000px){
+    header nav li a{
+        font-size: 13px ;
+    }
+
+}
+
+
+@media (max-width:600px){
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+
+    header nav li a{
+        font-size: 15px;
+    }
+
+    .category-list a{
+        font-size: 15px;
+        border-radius: 15px;
+    }
+
+    .products-list .product-item a{
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width:700px){
+    header{
+        display: flex ;
+        flex-direction: column;
+    }
+    header nav{
+        margin-top: 10px;
+    }
+    header .logo img{
+        width: 100%;
+    }
+    header nav li{
+        display: flex;
+        flex-direction: column;
+        font-size: 15px;
+    }
+
+    .banner ul{
+        margin-top: 50px;
+        padding-top: 50px;
+    }
+}

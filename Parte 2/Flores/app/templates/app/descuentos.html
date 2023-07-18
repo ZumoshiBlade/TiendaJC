@@ -1,0 +1,35 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block contenido %}
+    <a class="btn-agregarProducto" href="{% url 'agregar_descuento' %}">Agregar</a>
+    <div id="titulo-lista">
+        <h1>Suscripciones y descuentos</h1>
+    </div>
+    <div class="contenido-lista">
+        <table>
+            <thead>
+                <tr>
+                    <th>TIPO DESCUENTO</th>
+                    <th>DESCUENTO</th>
+                    <th>DURACION</th>
+                    <th>OPCIONES</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for aux in listaSuscripcion %}
+                <tr>
+                    <td> {{aux.descripcion}} </td>
+                    <td> {{aux.descuento}} </td>
+                    <td> {{aux.duracion}} </td>
+                    <td>
+                        <a class="btn-eliminarLista" href="{% url 'eliminar_descuento' aux.id %}" >Eliminar</a>
+                        <a class="btn-modificarLista" href="{% url 'modificar_suscripcion' aux.id %}">Modificar</a>
+                    </td>
+
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
